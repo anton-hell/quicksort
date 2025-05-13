@@ -1,7 +1,7 @@
 import java.util.Random;
 
 public class QuickSort {
-	public static int[] arcat(int[] a, int[] b) {
+	public static int[] arcat(int[] a, int[] b) { // array concatenation
 		int a1 = a.length;
 		int b1 = b.length;
 		int c1 = a1 + b1;
@@ -15,7 +15,7 @@ public class QuickSort {
 		return c;
 	}
 
-	public static int[] arcut(int[] a, int l) {
+	public static int[] arcut(int[] a, int l) { // reducing array to a certain length
 		int[] o = new int[l];
 		for (int i = 0; i < l; i++) {
 			o[i] = a[i];
@@ -23,14 +23,14 @@ public class QuickSort {
 		return o;
 	}
 
-	public static int[] arqs(int[] r) {
-		int l = r.length;
+	public static int[] arqs(int[] r) { // array quicksort recursive method
+		int l = r.length; // lenght
 		if (l == 1)
 			return r;
-		int p = r[l - 1];
-		int[] pr = { p };
+		int p = r[l - 1]; // pivot
+		int[] pr = { p }; // pivot as an array
 		int[] ar;
-		int[] r1 = new int[l];
+		int[] r1 = new int[l]; // sub array for less and more
 		int[] r2 = new int[l];
 		int[] ar1 = null;
 		int[] ar2 = null;
@@ -65,7 +65,7 @@ public class QuickSort {
 		arrprint(rs);
 	}
 
-	public static int[] randarr(Random rand, int l, int r) {
+	public static int[] randarr(Random rand, int l, int r) { // method to generate random array
 		int[] ar = new int[l];
 		for (int i = 0; i < l; i++) {
 			ar[i] = rand.nextInt(r);
@@ -73,7 +73,7 @@ public class QuickSort {
 		return ar;
 	}
 
-	public static void arrprint(int[] a) {
+	public static void arrprint(int[] a) { // method to print an array to the terminal
 		for (int i = 0; i < a.length; i++)
 			System.out.printf("%4d ", a[i]);
 		System.out.printf("\n");
